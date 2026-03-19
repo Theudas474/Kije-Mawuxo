@@ -1,1 +1,54 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Audios - Kije-Mawuxo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Kije-Mawuxo - Audios</h1>
+
+<div id="liste-audios"></div>
+
+<script>
+
+fetch("audio.json")
+.then(response => response.json())
+.then(data => {
+
+let container = document.getElementById("liste-audios");
+
+data.forEach(audio => {
+
+let bloc = document.createElement("div");
+
+let titre = document.createElement("h3");
+titre.textContent = audio.titre;
+
+let lecteur = document.createElement("audio");
+lecteur.controls = true;
+
+let source = document.createElement("source");
+source.src = audio.fichier;
+source.type = "audio/mpeg";
+
+lecteur.appendChild(source);
+
+bloc.appendChild(titre);
+bloc.appendChild(lecteur);
+
+container.appendChild(bloc);
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
