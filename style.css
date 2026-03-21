@@ -38,13 +38,15 @@ logo {
 nav {
     background-color: #34495e;
     padding: 10px;
+    margin: 20px 0;
     text-align: center;
 }
 
 nav a {
-    color: white;
-    margin: 10px;
+    color: #333;
+    margin: 0 10px;
     text-decoration: none;
+    font-size: 18px
     font-weight: bold;
 }
 
@@ -58,6 +60,19 @@ section {
     margin: 10px;
     background-color: white;
     border-radius: 8px;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Texte */
+p {
+    font-size: 18px;
+    padding: 0 15px;
 }
 
 /* Titres */
